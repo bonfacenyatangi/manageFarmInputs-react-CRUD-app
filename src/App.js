@@ -4,8 +4,10 @@ class App extends Component {
     super(props);
     this.state = {
       items: [
-        { text: "A1", id: "1" },
-        { text: "B1", id: "2" }
+        { text: "Fertilizer", id: "1", Image: "https://www.istockphoto.com/photo/yellow-gloved-hand-holding-a-green-scoop-with-fertilizer-gm93478217-11026560" },
+        { text: "Jembe", id: "2" },
+        { text: "Seedlings", id: "1" },
+        { text: "Jembe", id: "2" }
       ],
       text: "",
       updateText: ""
@@ -18,27 +20,27 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Manage Students Crud Form</h1>
+        <h1>Farm Input Management System</h1>
 
         <form onSubmit={this.handleSubmit}>
-          Name
+          Farm Input Name
           <input
             type="text"
             value={this.state.text}
-            placeholder="Enter Name"
+            placeholder="Enter Farm Input Name"
             onChange={this.handleChange}
           />
           <button type="submit" className="btn save-btn">
-            Save
+            Add Input
           </button>
         </form>
 
-        <h1> Display Students Data</h1>
+        <h1> Farm Inputs in Stock</h1>
 
         <table className="crud-table">
           <thead>
             <tr>
-              <th>Student Name</th>
+              <th>Farm Input Name</th>
               <th>Action</th>
             </tr>
           </thead>
